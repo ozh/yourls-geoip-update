@@ -1,0 +1,5 @@
+{
+    "require": {
+        "tronovav/geoip2-update": "^2.1"
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "packages": [
+        {
+            "name": "tronovav/geoip2-update",
+            "version": "v2.1.19",
+            "version_normalized": "2.1.19.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tronovav/geoip2-update.git",
+                "reference": "3cf02f5c5a6ace820961563aaca48a71b1b0e286"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tronovav/geoip2-update/zipball/3cf02f5c5a6ace820961563aaca48a71b1b0e286",
+                "reference": "3cf02f5c5a6ace820961563aaca48a71b1b0e286",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "suggest": {
+                "ext-zip": "Required for updating the CSV databases."
+            },
+            "time": "2021-12-28T20:08:55+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "tronovav\\GeoIP2Update\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Tronov",
+                    "email": "newtronov@gmail.com"
+                }
+            ],
+            "description": "Update GeoIP2/GeoLite2 databases from your script, program or via composer.",
+            "keywords": [
+                "geoip",
+                "geoip2",
+                "geolite2",
+                "geolocation",
+                "maxmind"
+            ],
+            "support": {
+                "email": "newtronov@gmail.com",
+                "issues": "https://github.com/tronovav/geoip2-update/issues",
+                "source": "https://github.com/tronovav/geoip2-update/tree/v2.1.19"
+            },
+            "funding": [
+                {
+                    "url": "https://donate.stream/tronovav",
+                    "type": "other"
+                },
+                {
+                    "url": "https://yoomoney.ru/to/410016198845596",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../tronovav/geoip2-update"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
