@@ -100,7 +100,7 @@ function ozh_yourls_geoupd_update_db() {
 
 // Sanitize the api key
 function ozh_yourls_sanitize_api_key( $key ) {
-    return preg_replace('/[^a-zA-Z0-9]/', '', $key);
+    return preg_replace('/[^a-zA-Z0-9_]/', '', $key);
 }
 
 // Echo last modified date of the database on Maxmind server
