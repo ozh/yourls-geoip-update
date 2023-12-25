@@ -3,7 +3,7 @@
 Plugin Name: GeoIP Update plugin
 Plugin URI: https://github.com/ozh/yourls-geoip-update
 Description: Update the GeoIP database
-Version: 1.0
+Version: 1.1
 Author: Ozh
 Author URI: http://ozh.org/
 */
