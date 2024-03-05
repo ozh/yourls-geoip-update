@@ -245,6 +245,7 @@ class Client
             CURLOPT_HEADER => true,
             CURLOPT_NOBODY => true,
             CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HEADERFUNCTION => function ($curl, $header) use (&$headers) {
                 $headerArray = explode(':', $header, 2);
                 if (count($headerArray) >= 2) // ignore invalid headers
