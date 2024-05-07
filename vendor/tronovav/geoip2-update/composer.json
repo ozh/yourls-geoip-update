@@ -21,7 +21,8 @@
     },
     "require": {
         "php": ">=5.3",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "suggest": {
         "ext-zip": "Required for updating the CSV databases."
@@ -30,15 +31,5 @@
         "psr-4": {
             "tronovav\\GeoIP2Update\\": "src/"
         }
-    },
-    "funding": [
-        {
-            "type": "other",
-            "url": "https://donate.stream/tronovav"
-        },
-        {
-            "type": "other",
-            "url": "https://yoomoney.ru/to/410016198845596"
-        }
-    ]
+    }
 }

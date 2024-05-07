@@ -20,7 +20,6 @@ use Composer\Script\Event;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 /**
- * Updates databases through a call from Composer.
  * Class ComposerClient
  * @package tronovav\GeoIP2Update
  */
@@ -55,9 +54,14 @@ class ComposerClient
         array_walk($infoArray, function ($info) use ($output) {
             $output->writeln("<fg=green>$info</>");
         });
+
         $errorsArray = $client->errors();
+
+        if(!empty($errorsArray))
+            $output->writeln("<fg=red>GeoIP2 database update errors:</>");
+
         array_walk($errorsArray, function ($error) use ($output) {
-            $output->writeln("<fg=red>$error</>");
+            $output->writeln("<fg=red>  - $error</>");
         });
     }
 }

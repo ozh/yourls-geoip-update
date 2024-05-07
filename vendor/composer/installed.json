@@ -2,27 +2,28 @@
     "packages": [
         {
             "name": "tronovav/geoip2-update",
-            "version": "v2.1.19",
-            "version_normalized": "2.1.19.0",
+            "version": "v2.3.1",
+            "version_normalized": "2.3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tronovav/geoip2-update.git",
-                "reference": "3cf02f5c5a6ace820961563aaca48a71b1b0e286"
+                "reference": "86fddebc2bd277832846c8d6bb3b059fd093db06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tronovav/geoip2-update/zipball/3cf02f5c5a6ace820961563aaca48a71b1b0e286",
-                "reference": "3cf02f5c5a6ace820961563aaca48a71b1b0e286",
+                "url": "https://api.github.com/repos/tronovav/geoip2-update/zipball/86fddebc2bd277832846c8d6bb3b059fd093db06",
+                "reference": "86fddebc2bd277832846c8d6bb3b059fd093db06",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
+                "ext-json": "*",
                 "php": ">=5.3"
             },
             "suggest": {
                 "ext-zip": "Required for updating the CSV databases."
             },
-            "time": "2021-12-28T20:08:55+00:00",
+            "time": "2023-10-25T22:16:50+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -51,18 +52,8 @@
             "support": {
                 "email": "newtronov@gmail.com",
                 "issues": "https://github.com/tronovav/geoip2-update/issues",
-                "source": "https://github.com/tronovav/geoip2-update/tree/v2.1.19"
+                "source": "https://github.com/tronovav/geoip2-update/tree/v2.3.1"
             },
-            "funding": [
-                {
-                    "url": "https://donate.stream/tronovav",
-                    "type": "other"
-                },
-                {
-                    "url": "https://yoomoney.ru/to/410016198845596",
-                    "type": "other"
-                }
-            ],
             "install-path": "../tronovav/geoip2-update"
         }
     ],
