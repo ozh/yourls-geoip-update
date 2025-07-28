@@ -290,18 +290,22 @@ class Client
      */
     protected function download($editionId)
     {
-        $ch = curl_init($this->getRequestUrl($editionId));
+        $url = $this->getRequestUrl($editionId);
+        $ch = curl_init($url);
         $fh = fopen($this->getArchiveFile($editionId), 'wb');
-        curl_setopt_array($ch, array(
-            CURLOPT_HTTPGET => true,
-            CURLOPT_BINARYTRANSFER => true,
-            CURLOPT_HEADER => false,
-            CURLOPT_FILE => $fh,
-        ));
+        curl_setopt_array($ch, [
+                CURLOPT_FILE => $fh,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_FAILONERROR => false, // keep false so we can capture non-200 responses
+                CURLOPT_TIMEOUT => 60,
+         ]);
         $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $curlErr = curl_error($ch);
         curl_close($ch);
         fclose($fh);
-        if ($response === false)
+
+        if ($response === false  || $httpCode !== 200 || filesize($this->getArchiveFile($remoteEditionData)) === 0)
             $this->errorUpdateEditions[$editionId] = "Error download \"{$editionId}\": " . curl_error($ch);
     }
 
