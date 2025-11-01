@@ -12,11 +12,12 @@
  *      ?>
  */
 
-function ozh_yourls_geoip2_update_client_run($key) {
+function ozh_yourls_geoip2_update_client_run($id, $key) {
     require 'vendor/autoload.php';
 
     // configuration
-    $client = new \tronovav\GeoIP2Update\Client(array(
+    $client = new \danielsreichenbach\GeoIP2Update\Client(array(
+        'account_id' => $id,
         'license_key' => $key,
         'dir' => __DIR__,
         'editions' => array('GeoLite2-Country'),

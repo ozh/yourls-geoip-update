@@ -7,16 +7,16 @@ namespace Composer\Autoload;
 class ComposerStaticInit837aa95e3629693a47c3d97548daaa13
 {
     public static $prefixLengthsPsr4 = array (
-        't' => 
+        'd' => 
         array (
-            'tronovav\\GeoIP2Update\\' => 22,
+            'danielsreichenbach\\GeoIP2Update\\' => 32,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'tronovav\\GeoIP2Update\\' => 
+        'danielsreichenbach\\GeoIP2Update\\' => 
         array (
-            0 => __DIR__ . '/..' . '/tronovav/geoip2-update/src',
+            0 => __DIR__ . '/..' . '/danielsreichenbach/geoip2-update/src',
         ),
     );
 

@@ -1,5 +1,5 @@
 {
     "require": {
-        "tronovav/geoip2-update": "^2.1"
+        "danielsreichenbach/geoip2-update": "^2.5"
     }
 }

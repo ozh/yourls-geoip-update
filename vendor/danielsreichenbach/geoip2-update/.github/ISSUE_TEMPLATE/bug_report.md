@@ -12,6 +12,7 @@ A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Updating via Composer or from a php application?
 2. Which editions of the databases you are trying to update?
 3. What configuration settings are you using? (here you can replace the license key "maxmind" with "...").
@@ -23,9 +24,11 @@ Steps to reproduce the behavior:
 If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following information):**
+
 - OS: [e.g. Windows or Linux or other]
 - PHP version: [e.g. 5.3.0, 7.4.0]
-- `tronovav/geoip2-update` version (to check the version run the command `composer show tronovav/geoip2-update`): [e.g. v2.1.11]
+- `danielsreichenbach/geoip2-update` version (to check the version run the
+  command `composer show danielsreichenbach/geoip2-update`): [e.g. v2.1.11]
 - Composer version: [e.g. 2.0.13]
 
 **Additional context**

@@ -1,33 +1,32 @@
-<?php return array (
-  'root' => 
-  array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
-    'aliases' => 
-    array (
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '359c3d02b31b1d953886f25fdc28bf1e38e62184',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
     ),
-    'reference' => 'b6fe247da24b325918d6001ff73fd192e5aa3921',
-    'name' => '__root__',
-  ),
-  'versions' => 
-  array (
-    '__root__' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b6fe247da24b325918d6001ff73fd192e5aa3921',
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '359c3d02b31b1d953886f25fdc28bf1e38e62184',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'danielsreichenbach/geoip2-update' => array(
+            'pretty_version' => 'v2.5.1',
+            'version' => '2.5.1.0',
+            'reference' => '382bb3c60214da80330718d0e3290aae26683511',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../danielsreichenbach/geoip2-update',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
     ),
-    'tronovav/geoip2-update' => 
-    array (
-      'pretty_version' => 'v2.1.19',
-      'version' => '2.1.19.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3cf02f5c5a6ace820961563aaca48a71b1b0e286',
-    ),
-  ),
 );

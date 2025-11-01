@@ -3,7 +3,7 @@
 Plugin Name: GeoIP Update plugin
 Plugin URI: https://github.com/ozh/yourls-geoip-update
 Description: Update the GeoIP database
-Version: 1.1
+Version: 1.2
 Author: Ozh
 Author URI: http://ozh.org/
 */
@@ -47,6 +47,7 @@ HTML;
     }
 
     // Get value from database
+    $geoip_api_id  = yourls_get_option( 'geoip_api_id' );
     $geoip_api_key = yourls_get_option( 'geoip_api_key' );
 
     // Create nonce
@@ -55,6 +56,7 @@ HTML;
     echo <<<HTML
 		<form method="post">
 		<input type="hidden" name="nonce" value="$nonce" />
+		<p><label for="geoip_api_id">Maxmind account ID</label> <input type="text" class="text" id="geoip_api_id" name="geoip_api_id" value="$geoip_api_id" /></p>
 		<p><label for="geoip_api_key">Maxmind license key</label> <input type="text" class="text" id="geoip_api_key" name="geoip_api_key" value="$geoip_api_key" /></p>
 		<p><input type="submit" class="button" value="Update DB" /></p>
 		</form>
@@ -68,16 +70,19 @@ HTML;
 
 // Update database
 function ozh_yourls_geoupd_update_db() {
+    $id  = $_POST['geoip_api_id'];
     $key = $_POST['geoip_api_key'];
 
-    if ($key) {
+    if ($key && $id) {
         // Validate geoip_api_key and update
+        $id  = ozh_yourls_sanitize_api_key($id);
         $key = ozh_yourls_sanitize_api_key($key);
+        yourls_update_option('geoip_api_id', $id);
         yourls_update_option('geoip_api_key', $key);
 
         // Run the updater
         require_once( __DIR__ . '/run.php' );
-        $results = ozh_yourls_geoip2_update_client_run($key);
+        $results = ozh_yourls_geoip2_update_client_run($id, $key);
 
         // check if the update was successful
         if( $results['updated'] ) {
