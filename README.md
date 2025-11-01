@@ -2,8 +2,7 @@
 
 This plugin updates the GeoIP database.
 
-Requires [YOURLS](https://yourls.org) `1.8.2` and above,
-and a [Maxmind account](https://www.maxmind.com/en/account/login) and a free license key. 
+Requires [YOURLS](https://yourls.org) `1.8.2` and above, a [Maxmind account](https://www.maxmind.com/en/account/login) and a free license key. 
 
 ## Installation
 
@@ -14,15 +13,15 @@ and a [Maxmind account](https://www.maxmind.com/en/account/login) and a free lic
 
 ## Usage
 
-Input your license key and click "Update DB". That's all.
+Input your account ID, license key and click "Update DB". That's all.
 
-![image](https://user-images.githubusercontent.com/223647/159169028-920041cf-0064-4cbe-9543-8898e4f75d52.png)
+<img width="972" height="286" alt="image" src="https://github.com/user-attachments/assets/42abd562-1886-4355-b2db-bc9b31124233" />
 
 ## Advanced usage
 
 You can use this plugin to automatically update the GeoIP database using `cron` if available on your server.
 
-See file `run.php` in the plugin directory for more information. 
+See file `run.php` in the plugin directory for more information and sample code.
 
 ## License
 
