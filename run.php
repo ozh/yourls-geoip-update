@@ -5,10 +5,12 @@
  *
  * Example :
  *      <?php
+ *      $id = 'your-account-id';      
  *      $key = 'your-license-key';
  *      include_once __DIR__ . '/run.php';
- *      $results = ozh_yourls_geoip2_update_client_run($key);
+ *      $results = ozh_yourls_geoip2_update_client_run($id, $key);
  *      // do something with $results
+ *      var_dump($results);
  *      ?>
  */
 
